@@ -6,29 +6,31 @@ If you have ever struggled to get autolayout to play nice with a `UIScrollView` 
 ## Using IKScrollView
 Using `IKScrollView` is very simple and requires 0 to 1 line of code.
 
-- Add a `UIScrollView` to your view controller.
+### Adding a scroll view to your view controller 
+Add a `UIScrollView` to your view controller and change its class type to `IKScrollView`.
 
 ![](IKScrollView_1.png)
 
-- Change its class type to `IKScrollView`.
-
 ![](IKScrollView_2.png)
 
-- Add a free floating `UIView` to your view controller. (i.e. a view that is not part of the view hierarchy)
+### Add Content View
+Add a free floating `UIView` to your view controller. (i.e. a view that is not part of the view hierarchy). We add this outside the view controller hierarchy so that nothing interferes with its autolayout constraints.
 
 ![](IKScrollView_3.png)
 
-- Connect the outlet from your `IKScrollView`s `contentView` property to the content view your free floating view.
+### Connect Outlet
+Connect the outlet from your `IKScrollView`s `contentView` property to the content view.
 
 ![](IKScrollView_4.png)
 
 ![](IKScrollView_5.png)
 
-- Build your content view with autolayout however you want!. In the example here my content view is designed for vertical scrolling. (The default for `IKScrollView`)
+### Build the Content View
+Build your content view with autolayout however you want just like a normal interface!. In the example here my content view is designed for vertical scrolling. (The default for `IKScrollView`)
 
 ![](IKScrollView_6.png)
 
-- Profit! :)
+### Profit! :)
  
 ![](IKScrollView.gif)
 
