@@ -19,14 +19,14 @@ Add a free floating `UIView` to your view controller. (i.e. a view that is not p
 ![](IKScrollView_3.png)
 
 ### Connect Outlet
-Connect the outlet from your `IKScrollView`s `contentView` property to the content view.
+Connect the outlet from your `IKScrollView`'s `contentView` property to the content view.
 
 ![](IKScrollView_4.png)
 
 ![](IKScrollView_5.png)
 
 ### Build the Content View
-Build your content view with autolayout however you want just like a normal interface!. In the example here my content view is designed for vertical scrolling. (The default for `IKScrollView`)
+Build your content view with autolayout however you want just like a normal interface! In the example here my content view is designed for vertical scrolling (the default for `IKScrollView`).
 
 ![](IKScrollView_6.png)
 
