@@ -41,6 +41,13 @@ Build your content view with autolayout however you want just like a normal inte
 - `SizeMatching.Height`: The content view will keep its width and be sized to the height of the `IKScrollView`
 - `SizeMatching.Both`: The content view will be sized to match the width and height of the `IKScrollView`
 - `SizeMatching.None`: No resizing will happen to the content view
+- `SizeMatching.Dynamic`: Allows you to supply a closure for the width and height that is used to size the content, eg:
+```
+myScrollView.sizeMatching = .Dynamic(
+  width: { self.view.bounds.size.width },
+  height: { calculateScrollHeight() }
+)
+```
 
 # Installation
 Install via cocoapods by adding the following to your Podfile
