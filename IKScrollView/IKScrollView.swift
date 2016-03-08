@@ -20,6 +20,15 @@ enum SizeMatching {
     
     /// No resizing will happen to the content view
     case None
+    
+    /**
+     *  Content view will be sized as required using closures for each value
+     *
+     *  @param width: Closure called when a width is needed
+     *
+     *  @return Closure called when a height is needed
+     */
+    case Dynamic(width: () -> CGFloat, height: () -> CGFloat)
 }
 
 class IKScrollView: UIScrollView {
@@ -44,6 +53,7 @@ class IKScrollView: UIScrollView {
             case .Width:    size.width = self.bounds.width
             case .Height:   size.height = self.bounds.height
             case .Both:     size.width = self.bounds.width; size.height = self.bounds.height
+            case .Dynamic(let width, let height): size.width = width(); size.height = height()
             case .None:     break
             }
             
